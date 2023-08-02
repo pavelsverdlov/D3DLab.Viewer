@@ -1,0 +1,85 @@
+﻿<Window x:Class="D3DLab.Viewer.Presentation.OpenFiles.OpenFilesWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:D3DLab.Viewer.Presentation.OpenFiles" xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+        mc:Ignorable="d" ResizeMode="CanResize"
+        Style="{StaticResource PopupWindowStyle}" x:Name="wind"
+        MinWidth="150"
+        Title="Open files"  >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition />
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock Grid.Row="0" Margin="5,5,0,5" Grid.ColumnSpan="2">
+            <Run Text="Recent files," />
+            <Run Text="click to load." Foreground="{StaticResource HighlightedTextColor}"/>
+        </TextBlock>
+
+        <ItemsControl ItemsSource="{Binding RecentFiles}" 
+                      Margin="5,0,0,0"
+                      BorderThickness="0,0,0,0"
+                 IsEnabled="{Binding RecentFilesEnabled}"
+                 Grid.Row="1"  Grid.ColumnSpan="2"
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Name="item" Text="{Binding Name}" Margin="0,5,0,0" Cursor="Hand" 
+                               HorizontalAlignment="Stretch">
+                         <i:Interaction.Triggers>
+                              <i:EventTrigger EventName="MouseLeftButtonDown">
+                                <i:InvokeCommandAction Command="{Binding DataContext.LoadCommand, ElementName=wind}" 
+                                                       CommandParameter="{Binding}" PassEventArgsToCommand="True"/>
+                            </i:EventTrigger>
+                            <i:EventTrigger EventName="MouseMove">
+                                <i:InvokeCommandAction Command="{Binding DataContext.MouseMoveCommand, ElementName=wind}" 
+                                                       CommandParameter="{Binding}"/>
+                                <i:ChangePropertyAction TargetName="item"  PropertyName="Foreground"
+                                                        Value="{StaticResource SelectedBorderBrushColor}"/>
+                            </i:EventTrigger>
+                            <i:EventTrigger EventName="MouseLeave">
+                                <i:ChangePropertyAction TargetName="item" 
+                                                        PropertyName="Foreground"
+                                                        Value="{StaticResource TextColor}"/>
+                            </i:EventTrigger>
+                             
+                        </i:Interaction.Triggers>
+                    </TextBlock>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+        <TextBlock Text="{Binding FullPathPreview}" Margin="5,5"
+                   TextWrapping="Wrap" Foreground="{StaticResource SecondTextColor}"
+                   Grid.Row="2"  Grid.ColumnSpan="2"/>
+
+
+        <Button Command="{Binding ClearRecentFilesHistoryCommand}"
+                    ToolTip="Clear resent files history"
+                    Margin="5,5,0,0"
+                    Grid.Column="0" Grid.Row="3"
+                    >
+            <TextBlock Margin="10,0,10,0" TextWrapping="Wrap" TextAlignment="Center">
+                Clear resent files history
+            </TextBlock>
+        </Button>
+        <Button Content="Open file"
+                    Command="{Binding OpenWinFileDialogCommand}"
+                    ToolTip="Open file"  Margin="5,5,5,0"
+                    Grid.Column="1" Grid.Row="3"
+                    />
+        
+        <Button Content="Close" Margin="5" Command="{Binding CloseCommand}" 
+                Grid.Row="4"  Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

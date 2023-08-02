@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath></OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ecs\D3DLab.ECS\D3DLab.ECS.csproj" />
+    <ProjectReference Include="..\..\ecs\D3DLab.FileFormats\D3DLab.FileFormats.csproj" />
+    <ProjectReference Include="..\..\ecs\D3DLab.Plugin\D3DLab.Plugin.csproj" />
+    <ProjectReference Include="..\..\ecs\D3DLab.SDX.Engine\D3DLab.SDX.Engine.csproj" />
+    <ProjectReference Include="..\..\ecs\D3DLab.Toolkit\D3DLab.Toolkit.csproj" />
+    <ProjectReference Include="..\..\WPFLab\WPFLab\WPFLab.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /d /y &quot;$(TargetPath)&quot; &quot;$(SolutionDir)D3DLab.Viewer\plugins\&quot;&#xD;&#xA;xcopy /d /y &quot;$(TargetDir)$(TargetName).pdb&quot; &quot;$(SolutionDir)D3DLab.Viewer\plugins\&quot;" />
+  </Target>
+
+</Project>

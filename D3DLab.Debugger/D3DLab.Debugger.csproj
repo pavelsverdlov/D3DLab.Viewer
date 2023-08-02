@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\ShaderSyntaxDef.xshd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ShaderSyntaxDef.xshd" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.1.3.50" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+    <PackageReference Include="Syncfusion.PropertyGrid.WPF" Version="17.4.0.46" />
+    <PackageReference Include="Syncfusion.SfInput.WPF" Version="17.4.0.47" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="17.4.0.46" />
+    <PackageReference Include="Syncfusion.Themes.Office2013DarkGray.WPF" Version="17.4.0.46" />
+    <PackageReference Include="Syncfusion.Tools.WPF" Version="17.4.0.46" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ecs\D3DLab.ECS\D3DLab.ECS.csproj" />
+    <ProjectReference Include="..\ecs\D3DLab.FileFormats\D3DLab.FileFormats.csproj" />
+    <ProjectReference Include="..\ecs\D3DLab.SDX.Engine\D3DLab.SDX.Engine.csproj" />
+    <ProjectReference Include="..\ecs\D3DLab.Toolkit\D3DLab.Toolkit.csproj" />
+    <ProjectReference Include="..\WPFLab\WPFLab\WPFLab.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
