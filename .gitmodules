@@ -2,3 +2,7 @@
 	path = ecs
 	url = https://github.com/pavelsverdlov/ecs.git
 	branch = main
+[submodule "WPFLab"]
+	path = WPFLab
+	url = https://github.com/pavelsverdlov/WPFLab.git
+	branch = master
