@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="geometry3Sharp" Version="1.0.324" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\ecs\D3DLab.ECS\D3DLab.ECS.csproj" />
+    <ProjectReference Include="..\..\ecs\D3DLab.SDX.Engine\D3DLab.SDX.Engine.csproj" />
+    <ProjectReference Include="..\..\ecs\D3DLab.Toolkit\D3DLab.Toolkit.csproj" />
+  </ItemGroup>
+
+</Project>
