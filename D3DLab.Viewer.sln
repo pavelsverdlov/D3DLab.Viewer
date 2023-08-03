@@ -33,6 +33,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "wpf", "wpf", "{83F200CB-12F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WPFLab", "WPFLab\WPFLab\WPFLab.csproj", "{E71CAC82-E545-4D0A-86AB-52C3F5B4479E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeSim.Particles.Plugin", "sandbox\LifeSim.Particles.Plugin\LifeSim.Particles.Plugin.csproj", "{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -313,6 +315,30 @@ Global
 		{E71CAC82-E545-4D0A-86AB-52C3F5B4479E}.ReleaseStripNoProfiling|x64.Build.0 = Release|x64
 		{E71CAC82-E545-4D0A-86AB-52C3F5B4479E}.ReleaseStripNoProfiling|x86.ActiveCfg = Release|Any CPU
 		{E71CAC82-E545-4D0A-86AB-52C3F5B4479E}.ReleaseStripNoProfiling|x86.Build.0 = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Debug|x64.Build.0 = Debug|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Debug|x86.Build.0 = Debug|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Release|x64.ActiveCfg = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Release|x64.Build.0 = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Release|x86.ActiveCfg = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.Release|x86.Build.0 = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStrip|Any CPU.ActiveCfg = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStrip|Any CPU.Build.0 = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStrip|x64.ActiveCfg = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStrip|x64.Build.0 = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStrip|x86.ActiveCfg = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStrip|x86.Build.0 = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStripNoProfiling|Any CPU.ActiveCfg = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStripNoProfiling|Any CPU.Build.0 = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStripNoProfiling|x64.ActiveCfg = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStripNoProfiling|x64.Build.0 = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStripNoProfiling|x86.ActiveCfg = Release|Any CPU
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441}.ReleaseStripNoProfiling|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -325,6 +351,7 @@ Global
 		{93023FB4-04F3-4C13-BECB-5EC027D470FE} = {86E9A574-B85C-4126-AA3D-F20B22052C96}
 		{DB7EECBD-F96D-4DF6-95C4-D97850097FC1} = {FC2962A5-61D3-414C-98E8-A6E535118918}
 		{E71CAC82-E545-4D0A-86AB-52C3F5B4479E} = {83F200CB-12FE-4E24-9AF7-D7CADEA2AC19}
+		{8A9C2A0D-298E-4DF4-84C3-D22E5BCA3441} = {8578DE1D-9B9E-403D-9A73-A9444725E150}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A6894B51-5773-4C78-8BDA-83890B33A851}

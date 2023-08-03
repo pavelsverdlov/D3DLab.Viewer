@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:LifeSim.Particles.Plugin">
+
+
+    <DataTemplate
+		DataType="{x:Type local:PluginViewModel}"
+		x:Key="{DataTemplateKey {x:Type local:PluginViewModel}}">
+        <local:PluginView />
+    </DataTemplate>
+
+</ResourceDictionary>
